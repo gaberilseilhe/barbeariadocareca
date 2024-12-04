@@ -2,26 +2,34 @@
 <html lang="pt-br">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - careca</title>
+    <title>Menu - Barbearia do Careca</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'MedievalSharp', serif;
             margin: 0;
             display: flex;
             flex-direction: column;
             height: 100vh;
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            background-image: linear-gradient(170deg, black, white);
+            color: #333;
+        }
+
+        .imagem {
+            filter: blur(10px);
+            height: 100vh;
+            z-index: -2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
 
         nav {
-            background-color: #111;
+            background-color: #6a3e36;
             padding: 10px 0;
-            border-bottom: 1px solid #333;
+            border-bottom: 3px solid #9c6d4f;
         }
 
         nav .container {
@@ -30,52 +38,28 @@
             justify-content: space-between;
         }
 
+        nav .brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
         nav img {
             height: 60px;
-        }
-
-        nav .brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-left: 10px;
-            color: #fff;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li:first-child {
-            margin-left: 0;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #fff;
+            border: 2px solid #ffd700;
+            border-radius: 50%;
         }
 
         .card {
-            background-color: rgb(153, 140, 140);
-            color: white;
+            background-color: #d7c297;
+            color: #6a3e36;
             max-width: 300px;
+            border: 3px solid #6a3e36;
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s ease;
             margin: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
@@ -83,26 +67,26 @@
         }
 
         .card-header {
-            background-color: #444;
+            background-color: #6a3e36;
+            color: #ffd700;
             text-align: center;
             font-weight: bold;
             padding: 10px 0;
+            border-bottom: 3px solid #9c6d4f;
         }
 
-        .card-body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
+        .card-body img {
+            max-width: 80%;
+            border: 2px solid #6a3e36;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         .card-title {
-            color: white;
             margin-top: 1rem;
-        }
-
-        .button-container {
-            margin-top: 20px;
+            font-size: 1.25rem;
+            text-align: center;
+            color: #6a3e36;
         }
 
         .cards {
@@ -111,44 +95,33 @@
             flex-wrap: wrap;
             flex-grow: 1;
         }
-
-        a.btn {
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-        }
-
-        a.btn img {
-            max-width: 100%;
-            height: auto;
-        }
-
         footer {
-        padding: 5px;
-        width: 100%;
-        text-align: center;
-        color: black;
-        margin-top: auto;
-    }
-    .alert-message {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    color: #ffd700;
+    margin-top: auto;
+    background-color: #6a3e36;
+}
+
+        .alert-message {
             display: none;
             position: fixed;
-            top: 120px; /* Ajuste a distância do topo */
-            left: 50%; /* Posiciona horizontalmente no meio */
-            transform: translateX(-50%); /* Centraliza o elemento */
-            background-color: #4caf50; /* Cor de fundo verde */
-            color: white;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffd700;
+            color: #6a3e36;
             padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            font-family: 'MedievalSharp', serif;
             z-index: 1000;
         }
-    
     </style>
 </head>
 <body>
+<img class="imagem" src="imagens/barbeariafoto.jpeg" alt="Logo">
 <div id="alertMessage" class="alert-message">Formulário enviado com sucesso!</div>
 <nav>
     <div class="container">
@@ -188,25 +161,21 @@
         </div>
     </div>
 </div>
-
+<br><br><br>
 <footer>
     &copy; 2024 Barbearia do Careca. Todos os direitos reservados.
 </footer>
 <script>
-
 if (localStorage.getItem('exibirAlerta') === 'true') {
-
     var alertMessage = document.getElementById('alertMessage');
-    
     alertMessage.style.display = 'block';
-
     setTimeout(function() {
         alertMessage.style.display = 'none';
     }, 2000);
-
     localStorage.removeItem('exibirAlerta');
 }
+</script>
 
-    </script>
 </body>
+
 </html>

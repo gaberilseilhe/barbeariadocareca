@@ -6,48 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <style>
-    .esc {
-  display: none;
-}
-.container {
-        width: 100%;
-        max-width: 600px;
-        padding: 30px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(30px);
-    }
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'MedievalSharp', serif;
         margin: 0;
         display: flex;
         flex-direction: column;
         height: 100vh;
         background-size: cover;
         background-position: center;
-        color: #fff;
-        background-image: linear-gradient(170deg, black, white);
+        color: #333;
+        background-image: linear-gradient(170deg, #6a3e36, #d7c297);
     }
+
     nav {
-        background-color: #111;
+        background-color: #6a3e36;
         padding: 10px 0;
-        border-bottom: 1px solid #333;
+        border-bottom: 3px solid #9c6d4f;
+    }
+
+    nav .container1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav .brand {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffd700;
     }
 
     nav img {
         height: 60px;
+        border: 2px solid #ffd700;
+        border-radius: 50%;
     }
 
-    nav .brand {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-left: 10px;
-        color: #fff;
-    }
-       
     .container {
         width: 100%;
         max-width: 600px;
@@ -58,32 +55,24 @@
         backdrop-filter: blur(30px);
     }
 
-    nav .container1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    
+    h2, label {
+        text-align: center;
+        color: #6a3e36;
+        font-weight: bold;
     }
-.botao {
-  margin-left: auto; 
-  display: block;   
-}
-h2, label {
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  color: #2c3e50;
-}
-.radio-group {
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    gap: 20px; /* Espaçamento entre os botões */
-}
-.btn {
+
+    .radio-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn {
         border-radius: 25px;
         padding: 10px 20px;
         font-weight: 600;
         transition: background-color 0.3s ease;
+        color: #fff;
     }
 
     .btn-success {
@@ -107,22 +96,26 @@ h2, label {
     .btn:focus {
         outline: none;
     }
-a {
-    text-decoration: none; /* Remove sublinhado ou (traço azul) */
+
+    a {
+        text-decoration: none;
     }
-footer {
-    padding: 5px;
-    width: 100%;
-    text-align: center;
-    color: black;
-    margin-top: auto;
-}
+
+    footer {
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        color: #ffd700;
+        margin-top: auto;
+        background-color: #6a3e36;
+    }
+
 </style>
 <body>
 <nav>
    <div class="container1">
-   <a  href="index.php"><div class="brand">Barbearia do Careca</div></a>
-   <a  href="index.php"><img src="imagens/logu.webp" alt="Logo"></a>
+   <a href="index.php"><div class="brand">Barbearia do Careca</div></a>
+   <a href="index.php"><img src="imagens/logu.webp" alt="Logo"></a>
     </div>
 </nav><br>
 <div class="container mt-3">
@@ -148,7 +141,6 @@ footer {
     </div>
 </div>
 
-    
     <div class="mb-3 mt-3">
       <label for="nome">Nome de Usuário:</label>
       <input id="nome" name="nome" class="form-control" type="text" required>

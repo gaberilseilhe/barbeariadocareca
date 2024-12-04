@@ -10,131 +10,132 @@ include "conexao.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        background-image: linear-gradient(170deg, black, white);
-    }
-
-    nav {
-            background-color: #111;
-            padding: 10px 0;
-            border-bottom: 1px solid #333;
+    <style>
+        body {
+            font-family: 'MedievalSharp', serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #333;
+            background-color: #f5e5b1;
         }
 
-    nav img {
-        height: 60px;
-    }
+        nav {
+            background-color: #6a3e36;
+            padding: 10px 0;
+            border-bottom: 3px solid #9c6d4f;
+        }
 
-    nav .brand {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-left: 10px;
-        color: #fff;
-    }
-       
-    .container {
-        width: 100%;
-        max-width: 600px;
-        padding: 30px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(30px);
-    }
+        nav .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
 
-    nav .container1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    
-    }
+        nav .brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
 
-    h2 {
-        text-align: center;
-        color: #2c3e50;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
+        nav img {
+            height: 60px;
+            border: 2px solid #ffd700;
+            border-radius: 50%;
+        }
 
-    label {
-        font-weight: bold;
-        color: #2c3e50;
-    }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(30px);
+        }
 
-    .form-control, .form-select {
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
+        h2 {
+            text-align: center;
+            color: #6a3e36;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
 
-    .form-control:focus, .form-select:focus {
-        border-color: #3498db;
-        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-    }
+        label {
+            font-weight: bold;
+            color: #6a3e36;
+        }
 
-    .botoes {
-        display: flex;
-        justify-content: space-between;
-    }
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 1px solid #6a3e36;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
 
-    .btn {
-        border-radius: 25px;
-        padding: 10px 20px;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
+        .form-control:focus, .form-select:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
 
-    .btn-success {
-        background-color: #2ecc71;
-        border: none;
-    }
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    .btn-primary {
-        background-color: #3498db;
-        border: none;
-    }
+        .btn {
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            border: 2px solid #6a3e36;
+        }
 
-    .btn-success:hover {
-        background-color: #27ae60;
-    }
+        .btn-success {
+            background-color: #2ecc71;
+            border: none;
+        }
 
-    .btn-primary:hover {
-        background-color: #2980b9;
-    }
+        .btn-primary {
+            background-color: #3498db;
+            border: none;
+        }
 
-    .btn:focus {
-        outline: none;
-    }
+        .btn-success:hover {
+            background-color: #27ae60;
+        }
 
-    a {
-        text-decoration: none; /* Remove sublinhado ou (traço azul) */
-    }
-    footer {
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        footer {
             padding: 5px;
             width: 100%;
             text-align: center;
-            color: black;
+            color: #ffd700;
             margin-top: auto;
+            background-color: #6a3e36;
         }
-</style>
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
 
 <body>
 <nav>
    <div class="container1">
-   <a  href="index.php"><div class="brand">Barbearia do Careca</div></a>
-   <a  href="index.php"><img src="imagens/logu.webp" alt="Logo"></a>
+       <a href="index.php"><div class="brand">Barbearia do Careca</div></a>
+       <a href="index.php"><img src="imagens/logu.webp" alt="Logo"></a>
     </div>
 </nav><br><br>
     <div class="container mt-3">
@@ -204,10 +205,10 @@ include "conexao.php";
     <footer>
     &copy; 2024 Barbearia do Careca. Todos os direitos reservados.
 </footer>
-</body>
 <script>
         function enviarAlerta() {
             localStorage.setItem('exibirAlerta', 'true');
         }
-    </script>
+</script>
+</body>
 </html>

@@ -129,7 +129,7 @@ include "conexao.php";
     }
 </style>
 
-<body> 
+<body>
 <nav>
    <div class="container1">
    <a  href="index.php"><div class="brand">Barbearia do Careca</div></a>
