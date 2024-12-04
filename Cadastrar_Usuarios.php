@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <style>
+  .esc {
+  display: none;
+}
     body {
         font-family: 'MedievalSharp', serif;
         margin: 0;
@@ -194,7 +197,8 @@
             document.getElementById("banco").className = "esc";
             document.getElementById("numero_conta").className = "esc";
             document.getElementById("numero_agencia").className = "esc";
-           
+            document.getElementById("chave_pix").className = "esc";
+
             break;
         case "2":
             document.getElementById("group").className = "esc";
