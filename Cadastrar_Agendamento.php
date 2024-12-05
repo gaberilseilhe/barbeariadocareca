@@ -137,7 +137,7 @@ include "conexao.php";
 <nav>
 <div class="container1">
    <a href="index.php"><div class="brand">Barbearia do Careca</div></a>
-   <a href="index.php"><img src="imagens/logoo.jpg" alt="Logo"></a>
+   <a href="index.php"><img src="imagens/logu.webp" alt="Logo"></a>
     </div>
 </nav><br><br><br><br><br><br>
     <div class="container mt-3">

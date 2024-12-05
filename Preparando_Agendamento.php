@@ -154,7 +154,7 @@ $result = $conn->query($sql);
 <nav>
     <div class="container">
         <a href="index.php"><div class="brand">Barbearia do Careca</div></a>
-        <a href="index.php"><img src="imagens/logoo.jpg" alt="Logo"></a>
+        <a href="index.php"><img src="imagens/logu.webp" alt="Logo"></a>
     </div>
 </nav>
 

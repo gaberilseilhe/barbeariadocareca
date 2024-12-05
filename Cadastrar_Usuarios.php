@@ -33,7 +33,7 @@
     nav .container1 {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     nav .brand {

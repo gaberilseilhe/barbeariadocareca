@@ -115,7 +115,7 @@
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            font-family: 'MedievalSharp', serif;
+            font-fadmily: 'MedievalSharp', serif;
             z-index: 1000;
         }
     </style>
